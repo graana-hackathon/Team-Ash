@@ -1,0 +1,132 @@
+<div style="text-align: center; width:100%;" class="padding-responsive slider slide-in">
+
+  <div style="height: 150px;">
+    <img src="https://s.rozee.pk/company_logos/92/29099949788220.png" style="width: 200px;margin-top:50px" />
+  </div>
+
+  <div class="i-search " *ngIf="!result">
+
+
+    <div style="height:50px"></div>
+    <span class="typewriter">
+      <p>I want to purchase a</p>
+    </span>
+
+
+
+    <mat-form-field style="display: inline-block;margin:auto 16px;">
+      <mat-label></mat-label>
+      <mat-select [(ngModel)]="search.type">
+        <mat-option value="plot">
+          plot
+        </mat-option>
+
+        <mat-option value="house">
+          house
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+    <span *ngIf="search.type == 'house'" class="fade-in">
+
+
+      having
+      <mat-form-field style="display: inline-block;margin:auto 16px;max-width: 75px;" class="fade-in">
+
+
+
+        <input type="number" placeholder="Rooms" matInput [matAutocomplete]="auto" [(ngModel)]="search.bedrooms">
+        <!-- <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let option of [1,2,3,4,5,10]" [value]="option">
+            {{option}}
+          </mat-option>
+        </mat-autocomplete> -->
+      </mat-form-field>
+      bedrooms
+
+    </span>
+    <span *ngIf="search.type == 'plot'" class="fade-in">
+
+
+      of size
+      <mat-form-field style="display: inline-block;margin:auto 16px;max-width: 75px;" class="fade-in">
+
+
+
+        <input type="number" placeholder="size" matInput [matAutocomplete]="auto" [(ngModel)]="search.size">
+        <!-- <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let option of [1,2,3,4,5,10]" [value]="option">
+            {{option}}
+          </mat-option>
+        </mat-autocomplete> -->
+      </mat-form-field>
+      marlas
+
+    </span>
+
+
+
+    <span *ngIf="search.bedrooms || search.size" class="fade-in">
+
+      in
+      <mat-form-field style="display: inline-block;margin:auto 16px;">
+
+        <input type="text" placeholder="Locality" matInput [matAutocomplete]="auto" [(ngModel)]="search.locality">
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option
+            *ngFor="let option of ['Islamabad','Lahore','Karachi','Quetta','Peshawar','DHA','Behria Town','Behria Enclave']"
+            [value]="option">
+            {{option}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </span>
+
+
+
+
+    <span *ngIf="search.locality" class="typewriter">
+
+      <p>and my budget is</p>
+
+
+      <mat-form-field style="display: inline-block;margin:auto 16px;"
+        [ngClass]="{'fade-in':search.locality ? true:false,'slide-out':!search.locality ? true:false}">
+
+        <span matPrefix>Rs. &nbsp;</span>
+        <input matInput placeholder="" type="number" step="100000" [(ngModel)]="search.budget">
+      </mat-form-field>
+    </span>
+
+
+    <div *ngIf="search.budget" class="slider slide-in">
+
+      <br>
+
+
+      <button mat-flat-button color="primary" (click)="_search()" [disabled]="loading">
+        <span>
+          CONTINUE
+        </span>
+
+        <span *ngIf="loading" style="display: inline-block;padding:5px 0px 5px 15px">
+          <mat-spinner color="accent" diameter="25"></mat-spinner>
+        </span>
+      </button>
+
+    </div>
+
+
+
+  </div>
+
+
+
+  <div class="i-data  slider slide-in" *ngIf="result">
+    <button mat-flat-button (click)="result=null">clear</button>
+    <app-data [ads]="result"></app-data>
+
+  </div>
+
+</div>

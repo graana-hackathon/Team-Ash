@@ -1,5 +1,22 @@
 # GraanaHackathon
 
+## API URL
+
+`https://graana.000webhostapp.com/search-api.php`
+
+sample: [https://graana.000webhostapp.com/search-api.php?budget=6100000&bedrooms=3&baths=1&locality=Islamabad](https://graana.000webhostapp.com/search-api.php?budget=6100000&bedrooms=3&baths=1&locality=Islamabad)
+
+
+
+## APP
+
+This is a progressive web app which mean it can be installed as pwa directly from browser. 
+
+Access it at [https://graana-hackathon-ash.web.app/](https://graana-hackathon-ash.web.app/)
+
+
+# Auto Generated
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.1.
 
 ## Development server

@@ -1,0 +1,48 @@
+<div *ngIf="ads">
+  <div *ngFor="let item of ads;">
+
+
+    <div class="ad_card">
+
+      <img src="https://m.graana.com/static/media/404-BG.3d31cae6.png" class="main-image" />
+
+      <div class="content">
+
+        <div>
+
+          <p class="price">{{item.demandPrice | to_words}}</p>
+          <small>{{item.size | marla}} {{item.type}} for sale</small>
+          <br>
+          <small>{{item.locality}}</small>
+        </div>
+
+        <div style="display: flex;justify-content:space-between">
+
+
+          <div>
+            <span *ngIf="item.type=='house'">
+              {{item.bedrooms}} beds &nbsp;<img alt="" src="https://m.graana.com/static/media/3b2b4b89.svg"
+                class="icon">
+              &nbsp;
+              {{item.baths}} baths &nbsp;<img alt="" src="https://m.graana.com/static/media/855fb800.svg" class="icon">
+            </span>
+          </div>
+
+
+
+
+
+          <div>
+
+            <img alt="" src="https://m.graana.com/static/media/904cf09c.svg" class="action-buttons">
+            &nbsp;&nbsp;
+            <img alt="" src="https://m.graana.com/static/media/35cebdcf.svg" class="action-buttons">
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

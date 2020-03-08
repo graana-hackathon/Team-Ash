@@ -4,7 +4,7 @@
 
 `https://graana.000webhostapp.com/search-api.php`
 
-sample: [https://graana.000webhostapp.com/search-api.php?budget=6100000&bedrooms=3&baths=1&locality=Islamabad](https://graana.000webhostapp.com/search-api.php?budget=6100000&bedrooms=3&baths=1&locality=Islamabad)
+sample: [https://graana.000webhostapp.com/search-api.php?type=house&budget=6100000&bedrooms=3&locality=Islamabad](https://graana.000webhostapp.com/search-api.php?type=house&budget=6100000&bedrooms=3&locality=Islamabad)
 
 
 

@@ -10,7 +10,6 @@ sample: [https://graana.000webhostapp.com/search-api.php?budget=6100000&bedrooms
 
 ## APP
 
-This is a progressive web app which mean it can be installed as pwa directly from browser. 
 
 Access it at [https://graana-hackathon-ash.web.app/](https://graana-hackathon-ash.web.app/)
 

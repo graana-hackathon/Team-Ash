@@ -2,6 +2,10 @@
 
 The project was divided into three parts
 
+* Front-end
+* API
+* Data Cleaning
+
 
 ## APP
 
@@ -20,15 +24,16 @@ sample: [https://graana.000webhostapp.com/search-api.php?type=house&budget=61000
 ## Team work
 
 
-| Arifullah Jan         | Frontend (Lead) |
+| Team Member         | Role  |
 |-----------------------|-----------------|
+| Arifullah Jan         | Frontend (Lead) |
 | Saqib Shakeel Khattak | API             |
 | Hassan Tariq          | Data Cleaning   |
 
 
 
 
-
+---
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.1.
 
